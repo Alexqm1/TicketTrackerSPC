@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Add a background color to the header */
+    color: #fff; /* Set the text color to white */
+    display: flex;
+    justify-content: space-between; /* Space between headers */
+    align-items: center;
+    padding: 10px 20px; /* Add some padding for spacing */
+}
+
+.centered-header {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 24px; /* Adjust the font size for the centered header */
+    text-align: center; /* Center the text within the header */
+    flex-grow: 1; /* Allow it to expand and center within the available space */
+}
+
+.left-header {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 24px; /* Adjust the font size for the left header */
+}
