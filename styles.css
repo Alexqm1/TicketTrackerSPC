@@ -4,8 +4,8 @@ body {
 }
 
 header {
-    background-color: #333; /* Add a background color to the header */
-    color: #fff; /* Set the text color to white */
+    background-color: #7c7c7c; /* Add a background color to the header */
+    color: #000000; /* Set the text color to black */
     display: flex;
     justify-content: space-between; /* Space between headers */
     align-items: center;
@@ -22,4 +22,16 @@ header {
 .left-header {
     margin: 0; /* Remove default margin for h1 */
     font-size: 24px; /* Adjust the font size for the left header */
+}
+
+/* Add styles for the links in the header */
+header a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #000000; /* Set the link color to white */
+}
+
+/* Add styles for links when hovered */
+header a:hover {
+    text-decoration: none; /* Underline links on hover (optional) */
+    color: #000000; /* Change link color on hover (optional) */
 }
