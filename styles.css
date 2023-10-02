@@ -36,16 +36,16 @@ header a:hover {
     color: #000000; /* Change link color on hover (optional) */
 }
 div {
-    background-color: #7c7c7c; /* Add a background color to the header */
+    /*background-color: #7c7c7c; /* Add a background color to the header */
     color: #000000; /* Set the text color to black */
     display: flex;
     justify-content: space-between; /* Space between headers */
     align-items: center;
-    padding: 10px 20px; /* Add some padding for spacing */
+    padding: 100px 100px; /* Add some padding for spacing */
 }
 
 .centered-div {
-    margin: 0; /* Remove default margin for h1 */
+    margin: 0; /* Remove default margin for div */
     font-size: 24px; /* Adjust the font size for the centered header */
     text-align: center; /* Center the text within the header */
     flex-grow: 1; /* Allow it to expand and center within the available space */
