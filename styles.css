@@ -36,7 +36,7 @@ header a:hover {
     color: #000000; /* Change link color on hover (optional) */
 }
 div {
-    /*background-color: #7c7c7c; /* Add a background color to the header */
+    background-color: #7c7c7c; /* Add a background color to the header */
     color: #000000; /* Set the text color to black */
     display: flex;
     justify-content: space-between; /* Space between headers */
