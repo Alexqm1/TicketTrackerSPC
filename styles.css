@@ -19,7 +19,7 @@ header {
     flex-grow: 1; /* Allow it to expand and center within the available space */
 }
 
-.left-header {
+.right-header {
     margin: 0; /* Remove default margin for h1 */
     font-size: 24px; /* Adjust the font size for the left header */
 }
