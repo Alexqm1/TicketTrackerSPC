@@ -1,0 +1,57 @@
+[
+    {
+        "TicketID": 1,
+        "Title": "Sample Ticket 1",
+        "Description": "This is a sample ticket.",
+        "Status": "Open",
+        "Priority": "High",
+        "CreatedBy": 1,
+        "AssignedTo": 2,
+        "CreatedAt": "2023-10-10 09:00:00",
+        "UpdatedAt": "2023-10-10 09:00:00"
+    },
+    {
+        "TicketID": 2,
+        "Title": "Sample Ticket 2",
+        "Description": "Another sample ticket.",
+        "Status": "Resolved",
+        "Priority": "Medium",
+        "CreatedBy": 2,
+        "AssignedTo": 1,
+        "CreatedAt": "2023-10-10 10:00:00",
+        "UpdatedAt": "2023-10-10 10:30:00"
+    },
+    {
+        "TicketID": 3,
+        "Title": "Sample Ticket 3",
+        "Description": "A third sample ticket.",
+        "Status": "Open",
+        "Priority": "Low",
+        "CreatedBy": 1,
+        "AssignedTo": 2,
+        "CreatedAt": "2023-10-11 08:30:00",
+        "UpdatedAt": "2023-10-11 09:15:00"
+    },
+    {
+        "TicketID": 4,
+        "Title": "Sample Ticket 4",
+        "Description": "Yet another sample ticket.",
+        "Status": "In Progress",
+        "Priority": "High",
+        "CreatedBy": 2,
+        "AssignedTo": 1,
+        "CreatedAt": "2023-10-11 10:45:00",
+        "UpdatedAt": "2023-10-11 11:30:00"
+    },
+    {
+        "TicketID": 5,
+        "Title": "Sample Ticket 5",
+        "Description": "Fifth sample ticket in the list.",
+        "Status": "Closed",
+        "Priority": "Medium",
+        "CreatedBy": 1,
+        "AssignedTo": 2,
+        "CreatedAt": "2023-10-12 14:20:00",
+        "UpdatedAt": "2023-10-12 15:00:00"
+    }
+]
