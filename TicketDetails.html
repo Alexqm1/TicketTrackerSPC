@@ -3,63 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for the layout of the page -->
+    <link rel="stylesheet" href="styles.css">
     <title>Ticket Tracker SPC</title>
 </head>
 <body>
-    <header>
-        <h1 class="centered-header"><a href="index.html">HelpDeskPro</a></h1>
-        <h1 class="right-header"><a href="Account.html">Account</a></h1>
-        <h1 class="right-header"><a href="TicketsList.html">Tickets</a></h1>
-        <h1 class="right-header"><a href="NewTicket.html">Create New</a></h1>
-    </header>
-    <h1>View Ticket Details</h1>
-
-    <label for="ticketSelector">Select a Ticket:</label>
-    <select id="ticketSelector">
-        <!-- <option value="1">Ticket 1</option> -->
-        <!-- <option value="2">Ticket 2</option> -->
-        <!-- <option value="3">Ticket 3</option> -->
-        <!-- <option value="4">Ticket 4</option> -->
-        <!-- <option value="5">Ticket 5</option> -->
-        <!-- Add more options for additional tickets as needed -->
-    </select>
-
-    <div id="ticketDetails">
-        <h2>Ticket Details</h2>
-        <p><strong>Title:</strong> <span id="ticketTitle"></span></p>
-        <p><strong>Description:</strong> <span id="ticketDescription"></span></p>
-        <p><strong>Status:</strong> <span id="ticketStatus"></span></p>
-        <p><strong>Priority:</strong> <span id="ticketPriority"></span></p>
-        <p><strong>Created By:</strong> <span id="ticketCreatedBy"></span></p>
-        <p><strong>Assigned To:</strong> <span id="ticketAssignedTo"></span></p>
-        <p><strong>Created At:</strong> <span id="ticketCreatedAt"></span></p>
-        <p><strong>Updated At:</strong> <span id="ticketUpdatedAt"></span></p>
-    </div>
+    <!-- ... (rest of your HTML) ... -->
 
     <script>
         const ticketSelector = document.getElementById('ticketSelector');
         const ticketDetails = document.getElementById('ticketDetails');
 
+        // Function to update the ticket details displayed on the page
+        function updateTicketDetails(selectedTicket) {
+            document.getElementById('ticketTitle').textContent = selectedTicket.Title;
+            document.getElementById('ticketDescription').textContent = selectedTicket.Description;
+            document.getElementById('ticketStatus').textContent = selectedTicket.Status;
+            document.getElementById('ticketPriority').textContent = selectedTicket.Priority;
+            document.getElementById('ticketCreatedBy').textContent = selectedTicket.CreatedBy;
+            document.getElementById('ticketAssignedTo').textContent = selectedTicket.AssignedTo;
+            document.getElementById('ticketCreatedAt').textContent = selectedTicket.CreatedAt;
+            document.getElementById('ticketUpdatedAt').textContent = selectedTicket.UpdatedAt;
+        }
+
+        // Fetch the JSON data from the file
+        fetch('TicketData.json')
+            .then(response => response.json())
+            .then(data => {
+                // Populate the ticket selector drop-down
+                data.forEach(ticket => {
+                    const option = document.createElement('option');
+                    option.value = ticket.TicketID;
+                    option.textContent = 'Ticket ' + ticket.TicketID;
+                    ticketSelector.appendChild(option);
+                });
+
+                // Get the ticketID from the URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const ticketID = urlParams.get('ticketID');
+
+                if (ticketID) {
+                    // Select the ticket in the drop-down
+                    ticketSelector.value = ticketID;
+
+                    // Display the ticket details
+                    const selectedTicket = data.find(ticket => ticket.TicketID === parseInt(ticketID));
+                    updateTicketDetails(selectedTicket);
+                }
+            })
+            .catch(error => console.error('Error fetching data: ', error));
+
+        // Event listener for when a different ticket is selected
         ticketSelector.addEventListener('change', function() {
             const selectedTicketID = ticketSelector.value;
 
-            // Fetch the JSON data from the file
             fetch('TicketData.json')
                 .then(response => response.json())
                 .then(data => {
-                    // Find the ticket in the JSON data based on the selected ID
                     const selectedTicket = data.find(ticket => ticket.TicketID === parseInt(selectedTicketID));
-
-                    // Update the ticket details displayed on the page
-                    document.getElementById('ticketTitle').textContent = selectedTicket.Title;
-                    document.getElementById('ticketDescription').textContent = selectedTicket.Description;
-                    document.getElementById('ticketStatus').textContent = selectedTicket.Status;
-                    document.getElementById('ticketPriority').textContent = selectedTicket.Priority;
-                    document.getElementById('ticketCreatedBy').textContent = selectedTicket.CreatedBy;
-                    document.getElementById('ticketAssignedTo').textContent = selectedTicket.AssignedTo;
-                    document.getElementById('ticketCreatedAt').textContent = selectedTicket.CreatedAt;
-                    document.getElementById('ticketUpdatedAt').textContent = selectedTicket.UpdatedAt;
+                    updateTicketDetails(selectedTicket);
                 })
                 .catch(error => console.error('Error fetching data: ', error));
         });
