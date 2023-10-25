@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">  <!-- External CSS file for the layout of the page -->
+    <title>Ticket Tracker SPC</title>
+</head>
+<body>
+    <header>
+        <h1 class="centered-header"><a href="index.html">HelpDeskPro</a></h1>
+        <h1 class="right-header"><a href="Account.html">Account</a></h1>
+        <h1 class="right-header"><a href="Tickets.html">Tickets</a></h1>
+        <h1 class="right-header"><a href="NewTicket.html">Create New</a></h1>
+    </header>
+<head>
+    <title>Submit a New Ticket</title>
+</head>
+<body>
+    <h1>Submit a New Ticket</h1>
+    <form id="ticketForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+            <option value="Closed">Closed</option>
+        </select><br><br>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br><br>
+
+        <button type="submit">Submit Ticket</button>
+    </form>
+
+    <script>
+        const ticketForm = document.getElementById('ticketForm');
+
+        ticketForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const newTicket = {
+                TicketID: generateTicketID(),
+                Title: document.getElementById('title').value,
+                Description: document.getElementById('description').value,
+                Status: document.getElementById('status').value,
+                Priority: document.getElementById('priority').value,
+                CreatedBy: 1, // Change to the actual user ID
+                AssignedTo: 2, // Change to the actual user ID
+                CreatedAt: getCurrentTimestamp(),
+                UpdatedAt: getCurrentTimestamp(),
+            };
+
+            // Add the new ticket to the existing data
+            jsonData.push(newTicket);
+
+            // Save the updated data (optional, requires server-side functionality)
+            // You would typically send this data to a server to update the JSON file.
+
+            alert('Ticket submitted successfully!');
+            // You can redirect to another page or take any other action here.
+        });
+
+        function generateTicketID() {
+            // You can implement a function to generate a unique TicketID based on your requirements.
+            // For simplicity, we'll use a timestamp as an example.
+            return Date.now();
+        }
+
+        function getCurrentTimestamp() {
+            const now = new Date();
+            return now.toISOString();
+        }
+    </script>
+</body>
+</html>

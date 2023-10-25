@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css"> <!-- Include an external CSS file -->
-        <title>Tickets</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">  <!-- External CSS file for the layout of the page -->
+    <title>Ticket Tracker SPC</title>
+</head>
 <body>
     <header>
         <h1 class="centered-header"><a href="index.html">HelpDeskPro</a></h1>
         <h1 class="right-header"><a href="Account.html">Account</a></h1>
         <h1 class="right-header"><a href="Tickets.html">Tickets</a></h1>
+        <h1 class="right-header"><a href="NewTicket.html">Create New</a></h1>
     </header>
+<head>
+    <title>Ticket list</title>
+</head>
+<body>
     <h1>Tickets</h1>
     <table border="1">
         <thead>
@@ -31,37 +36,40 @@
         </tbody>
     </table>
 
-    <script>
-        // Simulated data (you would replace this with actual database queries)
-        const ticketsData = [
+    <script type="application/json" id="ticketData">
+        [
             {
-                TicketID: 1,
-                Title: 'Sample Ticket 1',
-                Description: 'This is a sample ticket.',
-                Status: 'Open',
-                Priority: 'High',
-                CreatedBy: 1,
-                AssignedTo: 2,
-                CreatedAt: '2023-10-10 09:00:00',
-                UpdatedAt: '2023-10-10 09:00:00'
+                "TicketID": 1,
+                "Title": "Sample Ticket 1",
+                "Description": "This is a sample ticket.",
+                "Status": "Open",
+                "Priority": "High",
+                "CreatedBy": 1,
+                "AssignedTo": 2,
+                "CreatedAt": "2023-10-10 09:00:00",
+                "UpdatedAt": "2023-10-10 09:00:00"
             },
             {
-                TicketID: 2,
-                Title: 'Sample Ticket 2',
-                Description: 'Another sample ticket.',
-                Status: 'Resolved',
-                Priority: 'Medium',
-                CreatedBy: 2,
-                AssignedTo: 1,
-                CreatedAt: '2023-10-10 10:00:00',
-                UpdatedAt: '2023-10-10 10:30:00'
+                "TicketID": 2,
+                "Title": "Sample Ticket 2",
+                "Description": "Another sample ticket.",
+                "Status": "Resolved",
+                "Priority": "Medium",
+                "CreatedBy": 2,
+                "AssignedTo": 1,
+                "CreatedAt": "2023-10-10 10:00:00",
+                "UpdatedAt": "2023-10-10 10:30:00"
             }
-        ];
+        ]
+    </script>
 
+    <script>
+        const dataScript = document.getElementById('ticketData');
+        const jsonData = JSON.parse(dataScript.textContent);
         const tableBody = document.getElementById('ticketTableBody');
 
         // Loop through the data and populate the table
-        ticketsData.forEach((ticket) => {
+        jsonData.forEach((ticket) => {
             const row = document.createElement('tr');
             for (const key in ticket) {
                 const cell = document.createElement('td');
