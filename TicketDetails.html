@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for the layout of the page -->
+    <link rel="stylesheet" href="styles.css">
     <title>Ticket Tracker SPC</title>
 </head>
 <body>
@@ -36,30 +36,59 @@
         <p><strong>Created At:</strong> <span id="ticketCreatedAt"></span></p>
         <p><strong>Updated At:</strong> <span id="ticketUpdatedAt"></span></p>
     </div>
-
+    
     <script>
         const ticketSelector = document.getElementById('ticketSelector');
         const ticketDetails = document.getElementById('ticketDetails');
 
+        // Function to update the ticket details displayed on the page
+        function updateTicketDetails(selectedTicket) {
+            document.getElementById('ticketTitle').textContent = selectedTicket.Title;
+            document.getElementById('ticketDescription').textContent = selectedTicket.Description;
+            document.getElementById('ticketStatus').textContent = selectedTicket.Status;
+            document.getElementById('ticketPriority').textContent = selectedTicket.Priority;
+            document.getElementById('ticketCreatedBy').textContent = selectedTicket.CreatedBy;
+            document.getElementById('ticketAssignedTo').textContent = selectedTicket.AssignedTo;
+            document.getElementById('ticketCreatedAt').textContent = selectedTicket.CreatedAt;
+            document.getElementById('ticketUpdatedAt').textContent = selectedTicket.UpdatedAt;
+        }
+
+        // Fetch the JSON data from the file
+        fetch('TicketData.json')
+            .then(response => response.json())
+            .then(data => {
+                // Populate the ticket selector drop-down
+                data.forEach(ticket => {
+                    const option = document.createElement('option');
+                    option.value = ticket.TicketID;
+                    option.textContent = 'Ticket ' + ticket.TicketID;
+                    ticketSelector.appendChild(option);
+                });
+
+                // Get the ticketID from the URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const ticketID = urlParams.get('ticketID');
+
+                if (ticketID) {
+                    // Select the ticket in the drop-down
+                    ticketSelector.value = ticketID;
+
+                    // Display the ticket details
+                    const selectedTicket = data.find(ticket => ticket.TicketID === parseInt(ticketID));
+                    updateTicketDetails(selectedTicket);
+                }
+            })
+            .catch(error => console.error('Error fetching data: ', error));
+
+        // Event listener for when a different ticket is selected
         ticketSelector.addEventListener('change', function() {
             const selectedTicketID = ticketSelector.value;
 
-            // Fetch the JSON data from the file
             fetch('TicketData.json')
                 .then(response => response.json())
                 .then(data => {
-                    // Find the ticket in the JSON data based on the selected ID
                     const selectedTicket = data.find(ticket => ticket.TicketID === parseInt(selectedTicketID));
-
-                    // Update the ticket details displayed on the page
-                    document.getElementById('ticketTitle').textContent = selectedTicket.Title;
-                    document.getElementById('ticketDescription').textContent = selectedTicket.Description;
-                    document.getElementById('ticketStatus').textContent = selectedTicket.Status;
-                    document.getElementById('ticketPriority').textContent = selectedTicket.Priority;
-                    document.getElementById('ticketCreatedBy').textContent = selectedTicket.CreatedBy;
-                    document.getElementById('ticketAssignedTo').textContent = selectedTicket.AssignedTo;
-                    document.getElementById('ticketCreatedAt').textContent = selectedTicket.CreatedAt;
-                    document.getElementById('ticketUpdatedAt').textContent = selectedTicket.UpdatedAt;
+                    updateTicketDetails(selectedTicket);
                 })
                 .catch(error => console.error('Error fetching data: ', error));
         });
