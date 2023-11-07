@@ -82,13 +82,22 @@ main {
     float: left;
     margin-left: 20px;
 }
-/* Center the table */
+/* Center the table within a container */
 .centered-table {
-    margin: 0 auto;
+    text-align: center;
 }
 
-/* Add some basic styling to the table */
-.centered-table th, .centered-table td {
+/* Style the table */
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ticket-table th, .ticket-table td {
     padding: 10px;
-    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.ticket-table th {
+    background-color: #f2f2f2;
 }
