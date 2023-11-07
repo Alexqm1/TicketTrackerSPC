@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Include an external CSS file -->
     <title>Ticket Tracker SPC</title>
+    <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
-    <header>
+    <header>    
         <h1 class="centered-header"><a href="index.html">HelpDeskPro</a></h1>
-        <h1 class="right-header"><a href="Account.html">Account</a></h1>
-        <h1 class="right-header"><a href="TicketsList.html">Tickets</a></h1>
-        <h1 class="right-header"><a href="NewTicket.html">Create New</a></h1>
     </header>
-    <main>
-        <P>This is the home page</P>
-    </main>
+    <Main>
+        <button id="loginButton" class="login-button">Login</button>
+        <br><br>
+        <label for="username" class="login-label">UserName:</label>
+        <input type="text" id="username" class="login-input">
+        <br><br>
+        <label for="password" class="login-label">Password:</label>
+        <input type="password" id="password" class="login-input">
+        <br><br>
+        <button id="newUserButton" class="login-button">Create New User</button>
+    </Main>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            const users = {
+                "UsName": "UsPass",
+                // Add other users if needed
+            };
+            
+            if (users[username] === password) {
+                // Successful login, you can redirect to another page or perform other actions here.
+                alert("Login successful!");
+            } else {
+                alert("Username or password are incorrect. Please try again.");
+            }
+        });
+
+        document.getElementById("newUserButton").addEventListener("click", function() {
+            // Redirect to the NewUser.html page
+            window.location.href = "NewUser.html";
+        });
+    </script>
 </body>
 </html>
