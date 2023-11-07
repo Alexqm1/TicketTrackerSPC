@@ -1,0 +1,78 @@
+/* Center the header */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0088f8; /*Add a background color to the header */
+    color: #000000; /* Set the text color to black */
+    display: flex;
+    justify-content: space-between; /* Space between headers */
+    align-items: center;
+    padding: 10px 20px; /* Add some padding for spacing */
+}
+
+.centered-header {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 24px; /* Adjust the font size for the centered header */
+    text-align: center; /* Center the text within the header */
+    flex-grow: 1; /* Allow it to expand and center within the available space */
+}
+
+header a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #000000; /* Set the link color to white */
+}
+
+/* Center the main content */
+main {
+    background-color: #ffffff; /* Add a background color to the header */
+    color: #000000; /* Set the text color to black */
+    text-align: center;
+    padding-top: 100px ; /* Add some padding for spacing */
+}
+
+/* Apply styles to buttons, labels, and input elements as before */
+.login-button {
+    /* Center the login button and apply highlighting */
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.login-button:active {
+    background-color: #00408e;
+}
+
+/* Style the login label */
+.login-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style the login input */
+.login-input {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.login-input:hover {
+    border-color: #0074d9;
+}
+
+.login-input:focus {
+    border-color: #0074d9;
+}
