@@ -82,3 +82,13 @@ main {
     float: left;
     margin-left: 20px;
 }
+/* Center the table */
+.centered-table {
+    margin: 0 auto;
+}
+
+/* Add some basic styling to the table */
+.centered-table th, .centered-table td {
+    padding: 10px;
+    text-align: left;
+}
