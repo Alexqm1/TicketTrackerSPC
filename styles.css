@@ -97,17 +97,17 @@ main {
 /* Define unique max-width for specific columns using classes */
 .ticket-table th.max-width-ticket,
 .ticket-table td.max-width-ticket {
-    max-width: 50px; /* Set a maximum width for the Ticket ID column */
+    max-width: 700px; /* Set a maximum width for the Ticket ID column */
 }
 
 .ticket-table th.max-width-title,
 .ticket-table td.max-width-title {
-    max-width: 300; /* Set a maximum width for the Title column */
+    max-width: 1300; /* Set a maximum width for the Title column */
 }
 
 .ticket-table th.max-width-description,
 .ticket-table td.max-width-description {
-    max-width: 500px; /* Set a maximum width for the Description column */
+    max-width: 1500px; /* Set a maximum width for the Description column */
 }
 
 /* Add similar classes for other columns as needed */
