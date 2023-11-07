@@ -1,0 +1,20 @@
+[
+    {
+        "UsID": "1",
+        "UsName": "JohnDoe",
+        "UsPass": "password123",
+        "UsCreated": "2023-01-01"
+    },
+    {
+        "UsID": "2",
+        "UsName": "JaneSmith",
+        "UsPass": "example456",
+        "UsCreated": "2023-02-15"
+    },
+    {
+        "UsID": "3",
+        "UsName": "RobertJohnson",
+        "UsPass": "secure789",
+        "UsCreated": "2023-03-27"
+    }
+]
