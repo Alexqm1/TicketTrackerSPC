@@ -78,3 +78,7 @@ main {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.left-header {
+    float: left;
+    margin-left: 20px;
+}
