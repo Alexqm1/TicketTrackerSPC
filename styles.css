@@ -90,7 +90,7 @@ main {
 /* Style the table */
 .ticket-table {
     margin: 0 auto; /* Center the table */
-    width: 90%;
+    /*width: 90%;*/
     border-collapse: collapse;
 }
 
