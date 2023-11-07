@@ -26,18 +26,22 @@
         document.getElementById("loginButton").addEventListener("click", function() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-            
-            const users = {
-                "UsName": "UsPass",
-                // Add other users if needed
-            };
-            
-            if (users[username] === password) {
-                // Successful login, you can redirect to another page or perform other actions here.
-                alert("Login successful!");
-            } else {
-                alert("Username or password are incorrect. Please try again.");
-            }
+
+            // Load user data from UsCntl.json (simulate an AJAX request)
+            fetch("UsCntl.json")
+                .then(response => response.json())
+                .then(data => {
+                    const user = data.find(user => user.UsName === username && user.UsPass === password);
+                    if (user) {
+                        // Successful login, redirect to TicketsList.html
+                        window.location.href = "TicketsList.html";
+                    } else {
+                        alert("Username or password are incorrect. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching UsCntl.json: ", error);
+                });
         });
 
         document.getElementById("newUserButton").addEventListener("click", function() {
