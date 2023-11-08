@@ -1,57 +1,112 @@
 [
     {
         "TicketID": 1,
-        "Title": "Sample Ticket 1",
-        "Description": "This is a sample ticket.",
+        "Title": "Software Bug Report",
+        "Description": "I encountered a critical bug in the latest software update. Whenever I try to open the application, it crashes immediately. This issue is preventing me from completing my work. Urgent attention is needed.",
         "Status": "Open",
         "Priority": "High",
-        "CreatedBy": 1,
-        "AssignedTo": 2,
-        "CreatedAt": "2023-10-10 09:00:00",
-        "UpdatedAt": "2023-10-10 09:00:00"
+        "CreatedBy": 3,
+        "AssignedTo": 1,
+        "CreatedAt": "2023-11-07 10:15:00",
+        "UpdatedAt": "2023-11-07 10:15:00"
     },
     {
         "TicketID": 2,
-        "Title": "Sample Ticket 2",
-        "Description": "Another sample ticket.",
-        "Status": "Resolved",
-        "Priority": "Medium",
-        "CreatedBy": 2,
-        "AssignedTo": 1,
-        "CreatedAt": "2023-10-10 10:00:00",
-        "UpdatedAt": "2023-10-10 10:30:00"
+        "Title": "Hardware Malfunction",
+        "Description": "My laptop's keyboard is malfunctioning. Some keys are unresponsive, and it's affecting my productivity. I've tried cleaning it, but the problem persists. I need assistance to fix this issue as soon as possible.",
+        "Status": "Open",
+        "Priority": "High",
+        "CreatedBy": 4,
+        "AssignedTo": 2,
+        "CreatedAt": "2023-11-07 11:30:00",
+        "UpdatedAt": "2023-11-07 11:30:00"
     },
     {
         "TicketID": 3,
-        "Title": "Sample Ticket 3",
-        "Description": "A third sample ticket.",
+        "Title": "New Feature Request",
+        "Description": "I have a suggestion for a new feature in our app. It would be great to have a dark mode option for night-time usage. This feature can improve user experience. I would like to discuss this idea further with the development team.",
         "Status": "Open",
-        "Priority": "Low",
-        "CreatedBy": 1,
-        "AssignedTo": 2,
-        "CreatedAt": "2023-10-11 08:30:00",
-        "UpdatedAt": "2023-10-11 09:15:00"
+        "Priority": "Medium",
+        "CreatedBy": 5,
+        "AssignedTo": null,
+        "CreatedAt": "2023-11-07 12:45:00",
+        "UpdatedAt": "2023-11-07 12:45:00"
     },
     {
         "TicketID": 4,
-        "Title": "Sample Ticket 4",
-        "Description": "Yet another sample ticket.",
-        "Status": "In Progress",
+        "Title": "Network Connectivity Issue",
+        "Description": "Our office is experiencing network connectivity problems. Internet access is slow, and employees are unable to access critical online resources. We need immediate troubleshooting and resolution to ensure uninterrupted workflow.",
+        "Status": "Open",
         "Priority": "High",
-        "CreatedBy": 2,
-        "AssignedTo": 1,
-        "CreatedAt": "2023-10-11 10:45:00",
-        "UpdatedAt": "2023-10-11 11:30:00"
+        "CreatedBy": 6,
+        "AssignedTo": 7,
+        "CreatedAt": "2023-11-07 14:00:00",
+        "UpdatedAt": "2023-11-07 14:00:00"
     },
     {
         "TicketID": 5,
-        "Title": "Sample Ticket 5",
-        "Description": "Fifth sample ticket in the list.",
-        "Status": "Closed",
+        "Title": "Website Redesign Request",
+        "Description": "We're looking to give our website a fresh new look to improve user engagement and navigation. The current design feels outdated, and we believe a redesign will enhance our online presence. We're seeking proposals from web designers and developers.",
+        "Status": "Open",
+        "Priority": "Low",
+        "CreatedBy": 8,
+        "AssignedTo": null,
+        "CreatedAt": "2023-11-07 15:30:00",
+        "UpdatedAt": "2023-11-07 15:30:00"
+    },
+    {
+        "TicketID": 6,
+        "Title": "Data Backup Request",
+        "Description": "We need to schedule regular data backups for our company's server. It's crucial to ensure data safety and disaster recovery. We're looking for a solution that automates this process and keeps our data secure.",
+        "Status": "Open",
         "Priority": "Medium",
-        "CreatedBy": 1,
-        "AssignedTo": 2,
-        "CreatedAt": "2023-10-12 14:20:00",
-        "UpdatedAt": "2023-10-12 15:00:00"
+        "CreatedBy": 9,
+        "AssignedTo": 10,
+        "CreatedAt": "2023-11-08 09:15:00",
+        "UpdatedAt": "2023-11-08 09:15:00"
+    },
+    {
+        "TicketID": 7,
+        "Title": "Security Vulnerability Report",
+        "Description": "We've identified a potential security vulnerability in our web application. It could lead to unauthorized access and data breaches. We urgently need a security audit and fix to protect our user's information.",
+        "Status": "Open",
+        "Priority": "High",
+        "CreatedBy": 10,
+        "AssignedTo": 11,
+        "CreatedAt": "2023-11-08 10:30:00",
+        "UpdatedAt": "2023-11-08 10:30:00"
+    },
+    {
+        "TicketID": 8,
+        "Title": "Employee Training Request",
+        "Description": "We want to organize a training session for our employees to enhance their skills in digital marketing. The training should cover social media marketing, SEO, and content creation. Looking for training providers and a suitable schedule.",
+        "Status": "Open",
+        "Priority": "Low",
+        "CreatedBy": 11,
+        "AssignedTo": null,
+        "CreatedAt": "2023-11-08 11:45:00",
+        "UpdatedAt": "2023-11-08 11:45:00"
+    },
+    {
+        "TicketID": 9,
+        "Title": "Product Enhancement Request",
+        "Description": "We have feedback from customers about improving our product. The enhancements include adding new features and streamlining the user interface. This can make our product more competitive in the market.",
+        "Status": "Open",
+        "Priority": "Medium",
+        "CreatedBy": 12,
+        "AssignedTo": 13,
+        "CreatedAt": "2023-11-08 13:00:00",
+        "UpdatedAt": "2023-11-08 13:00:00"
+    },
+    {
+        "TicketID": 10,
+        "Title": "Expense Report Submission Issue",
+        "Description": "I'm having trouble submitting my expense report through the online system. It's essential to get this resolved as it affects reimbursement for business expenses. I need assistance to ensure my report goes through successfully.",
+        "Status": "Open",
+        "Priority": "High",
+        "CreatedBy": 13,
+        "AssignedTo": 14,
+        "CreatedAt": "2023-11-08 14:15:00",
+        "UpdatedAt": "2023-11-08 14:15:00"
     }
 ]

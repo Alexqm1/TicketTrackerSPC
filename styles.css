@@ -98,16 +98,22 @@ main {
 .ticket-table th.max-width-ticket,
 .ticket-table td.max-width-ticket {
     max-width: 700px; /* Set a maximum width for the Ticket ID column */
+    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    margin: 10px;
 }
 
 .ticket-table th.max-width-title,
 .ticket-table td.max-width-title {
     max-width: 1300; /* Set a maximum width for the Title column */
+    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    margin: 10px;
 }
 
 .ticket-table th.max-width-description,
 .ticket-table td.max-width-description {
     max-width: 1500px; /* Set a maximum width for the Description column */
+    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    margin: 10px;
 }
 
 /* Add similar classes for other columns as needed */
