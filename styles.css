@@ -1,42 +1,37 @@
+/* Reset default margin and padding for the entire page */
 body {
     margin: 0;
     padding: 0;
 }
 
+/* Header styles */
 header {
-    background-color: #0088f8; /*Add a background color to the header */
-    color: #000000; /* Set the text color to black */
+    background-color: #0088f8;
+    color: #000000;
     display: flex;
-    justify-content: space-between; /* Space between headers */
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Add some padding for spacing */
+    padding: 10px 20px;
 }
 
 .centered-header {
-    margin: 0; /* Remove default margin for h1 */
-    font-size: 24px; /* Adjust the font size for the centered header */
-    text-align: center; /* Center the text within the header */
-    flex-grow: 1; /* Allow it to expand and center within the available space */
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 header a {
-    text-decoration: none; /* Remove underlines from links */
-    color: #000000; /* Set the link color to white */
+    text-decoration: none;
+    color: #000000;
 }
 
 /* Center the main content */
 main {
-    background-color: #ffffff; /* Add a background color to the header */
-    color: #000000; /* Set the text color to black */
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
-    padding-top: 20px ; /* Add some padding for spacing */
-}
-
-.centered-header {
-    margin: 0; /* Remove default margin for h1 */
-    font-size: 24px; /* Adjust the font size for the centered header */
-    text-align: center; /* Center the text within the header */
-    flex-grow: 1; /* Allow it to expand and center within the available space */
+    padding: 20px; /* You had a typo in padding property */
 }
 
 .dropdown {
@@ -61,7 +56,7 @@ main {
     position: absolute;
     background-color: #333;
     min-width: 160px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -78,10 +73,12 @@ main {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .left-header {
     float: left;
     margin-left: 20px;
 }
+
 /* Center the table within a container */
 .centered-table {
     text-align: center;
@@ -94,30 +91,59 @@ main {
     border-collapse: collapse;
 }
 
-/* Define unique max-width for specific columns using classes */
+/* Define unique max-width, padding, and margin for specific columns using classes */
 .ticket-table th.max-width-ticket,
 .ticket-table td.max-width-ticket {
-    max-width: 300px; /* Set a maximum width for the Ticket ID column */
-    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    max-width: 300px;
+    padding: 10px;
     margin: 10px;
-} 
+}
 
 .ticket-table th.max-width-title,
 .ticket-table td.max-width-title {
-    max-width: 800; /* Set a maximum width for the Title column */
-    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    max-width: 800px;
+    padding: 10px;
     margin: 10px;
 }
 
 .ticket-table th.max-width-description,
 .ticket-table td.max-width-description {
-    max-width: 1000px; /* Set a maximum width for the Description column */
-    padding: 10px; /* Add 10px of padding to the text inside the cell */
+    max-width: 1000px;
+    padding: 10px;
     margin: 10px;
 }
 
 /* Add similar classes for other columns as needed */
-
 .ticket-table th {
     background-color: #f2f2f2;
+}
+
+/* New Ticket form styles */
+.new-ticket-title {
+    text-align: center;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
