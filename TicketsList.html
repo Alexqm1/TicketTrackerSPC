@@ -21,6 +21,10 @@
     </header>
     <main>
         <h2>Tickets</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by Ticket ID">
+            <button onclick="searchTickets()">Search</button>
+        </div>
         <div class="centered-table">
             <table border="1" class="ticket-table">
                 <thead>
@@ -72,7 +76,24 @@
                     tableBody.appendChild(row);
                 });
             })
+            
             .catch(error => console.error('Error fetching data: ', error));
+
+        // Function to search for tickets
+        function searchTickets() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            if (searchTerm === '') {
+                // If search input is empty, show all tickets
+                populateTable(allTicketsData);
+            } else {
+                // Filter tickets based on the search term (Ticket ID)
+                const searchResults = allTicketsData.filter(ticket => ticket.TicketID.toLowerCase().includes(searchTerm));
+                populateTable(searchResults);
+            }
+        }
+        
     </script>
 </body>
 </html>
