@@ -60,15 +60,18 @@
     </div>
 
     <script>
-        // Show the default tab (Tab 1)
+        // Show the default tab (Tab 1) and hide others
         showTab('tab1');
 
         function showTab(tabId) {
             const tabContents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove("active");
+                if (tabContents[i].id === tabId) {
+                    tabContents[i].classList.add("active");
+                } else {
+                    tabContents[i].classList.remove("active");
+                }
             }
-            document.getElementById(tabId).classList.add("active");
         }
     </script>
 </body>
