@@ -1,63 +1,35 @@
-/* Reset default margin and padding for the entire page */
 body {
     margin: 0;
     padding: 0;
 }
 
-/* Header styles */
 header {
-    background-color: #0088f8;
-    color: #000000;
+    background-color: #0088f8; /*Add a background color to the header */
+    color: #000000; /* Set the text color to black */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between headers */
     align-items: center;
-    padding: 10px 20px;
-}
-
-.left-header {
-    float: left;
+    padding: 10px 20px; /* Add some padding for spacing */
 }
 
 .centered-header {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 24px; /* Adjust the font size for the centered header */
+    text-align: center; /* Center the text within the header */
+    flex-grow: 1; /* Allow it to expand and center within the available space */
+}
+
+header a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #000000; /* Set the link color to white */
+}
+
+/* Center the main content */
+main {
+    background-color: #ffffff; /* Add a background color to the header */
+    color: #000000; /* Set the text color to black */
     text-align: center;
-}
-
-.header a {
-    text-decoration: none;
-    color: #000000;
-}
-
-/* Page title styles */
-.page-title {
-    text-align: center;
-}
-
-/* Form label and select styles */
-.label {
-    display: block;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Ticket details styles */
-.ticket-details {
-    text-align: center;
-}
-
-.details-title {
-    text-align: center;
-}
-
-.ticket-info {
-    font-weight: bold;
+    padding-top: 100px ; /* Add some padding for spacing */
 }
 
 /* Apply styles to buttons, labels, and input elements as before */
@@ -104,4 +76,3 @@ header {
     border-color: #0074d9;
 }
 
-/* Add more CSS styles as needed */

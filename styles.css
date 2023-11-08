@@ -14,14 +14,15 @@ header {
     padding: 10px 20px;
 }
 
-.centered-header {
-    margin: 0;
-    font-size: 24px;
-    text-align: center;
-    flex-grow: 1;
+.left-header {
+    float: left;
 }
 
-header a {
+.centered-header {
+    text-align: center;
+}
+
+.header a {
     text-decoration: none;
     color: #000000;
 }
@@ -31,9 +32,10 @@ main {
     background-color: #ffffff;
     color: #000000;
     text-align: center;
-    padding: 20px; /* You had a typo in padding property */
+    padding: 20px; /* Corrected the padding property */
 }
 
+/* Dropdown styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -74,17 +76,12 @@ main {
     display: block;
 }
 
-.left-header {
-    float: left;
-    margin-left: 20px;
-}
-
 /* Center the table within a container */
 .centered-table {
     text-align: center;
 }
 
-/* Style the table */
+/* Table styles */
 .ticket-table {
     margin: 0 auto; /* Center the table */
     max-width: 90%;
@@ -93,33 +90,33 @@ main {
 
 /* Define unique max-width, padding, and margin for specific columns using classes */
 .ticket-table th.max-width-ticket,
-.ticket-table td.max-width-ticket {
-    max-width: 300px;
+.ticket-table td.max-width-ticket,
+.ticket-table th.max-width-title,
+.ticket-table td.max-width-title,
+.ticket-table th.max-width-description,
+.ticket-table td.max-width-description {
     padding: 10px;
     margin: 10px;
+}
+
+.ticket-table th.max-width-ticket,
+.ticket-table td.max-width-ticket {
+    max-width: 300px; /* Set a maximum width for the Ticket ID column */
 }
 
 .ticket-table th.max-width-title,
 .ticket-table td.max-width-title {
-    max-width: 800px;
-    padding: 10px;
-    margin: 10px;
+    max-width: 800px; /* Set a maximum width for the Title column */
 }
 
 .ticket-table th.max-width-description,
 .ticket-table td.max-width-description {
-    max-width: 1000px;
-    padding: 10px;
-    margin: 10px;
-}
-
-/* Add similar classes for other columns as needed */
-.ticket-table th {
-    background-color: #f2f2f2;
+    max-width: 1000px; /* Set a maximum width for the Description column */
 }
 
 /* New Ticket form styles */
-.new-ticket-title {
+.new-ticket-title,
+.page-title {
     text-align: center;
 }
 
@@ -129,16 +126,9 @@ main {
     margin: 10px 0;
 }
 
-.form-input1 {
-    width: 30%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
+.form-input1,
 .form-input2 {
-    width: 10%;
+    width: 30%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -155,4 +145,17 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Ticket details styles */
+.ticket-details {
+    text-align: center;
+}
+
+.details-title {
+    text-align: center;
+}
+
+.ticket-info {
+    font-weight: bold;
 }
