@@ -185,4 +185,31 @@ h2 {
     font-weight: bold;
 }
 
-/* Add more CSS styles as needed */
+.tabs {
+    background-color: #333;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.tab-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: #444;
+}
+
+.tab-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
