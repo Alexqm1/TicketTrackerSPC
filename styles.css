@@ -130,8 +130,7 @@ main {
 }
 
 .form-input {
-    align-content: center;
-    max-width: 50%;
+    width: 50%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -139,9 +138,8 @@ main {
 }
 
 .submit-button {
-    align-content: center;
     display: block;
-    max-width: 50%;
+    width: 50%;
     padding: 10px;
     background-color: #0073e6;
     color: white;
