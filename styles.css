@@ -157,24 +157,14 @@ main {
     cursor: pointer;
 }
 
-.header a {
-    text-decoration: none;
-    color: #000000;
-}
-
-/* Page title styles */
-.page-title {
-    text-align: center;
-}
-
-/* Form label and select styles */
-.label {
+/* Ticket Selector Label and Select styles */
+.ticketSelectorLabel {
     display: block;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.select {
+.ticketSelector {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -182,13 +172,13 @@ main {
     border-radius: 5px;
 }
 
-/* Ticket details styles */
+/* Ticket Details styles */
 .ticket-details {
     text-align: center;
 }
 
-.details-title {
-    text-align: center;
+h2 {
+    font-weight: bold;
 }
 
 .ticket-info {
@@ -196,4 +186,3 @@ main {
 }
 
 /* Add more CSS styles as needed */
-
