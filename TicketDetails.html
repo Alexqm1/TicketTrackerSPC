@@ -19,28 +19,23 @@
             </div>
         </div>
     </header>
-    <h1>View Ticket Details</h1>
+    <main>
+    <h1 class="page-title">View Ticket Details</h1>
 
-    <label for="ticketSelector">Select a Ticket:</label>
-    <select id="ticketSelector">
-        <!-- <option value="1">Ticket 1</option> -->
-        <!-- <option value="2">Ticket 2</option> -->
-        <!-- <option value="3">Ticket 3</option> -->
-        <!-- <option value="4">Ticket 4</option> -->
-        <!-- <option value="5">Ticket 5</option> -->
-        <!-- Add more options for additional tickets as needed -->
+    <label for="ticketSelector" class="label">Select a Ticket:</label>
+    <select id="ticketSelector" class="select">
     </select>
 
-    <div id="ticketDetails">
-        <h2>Ticket Details</h2>
-        <p><strong>Title:</strong> <span id="ticketTitle"></span></p>
-        <p><strong>Description:</strong> <span id="ticketDescription"></span></p>
-        <p><strong>Status:</strong> <span id="ticketStatus"></span></p>
-        <p><strong>Priority:</strong> <span id="ticketPriority"></span></p>
-        <p><strong>Created By:</strong> <span id="ticketCreatedBy"></span></p>
-        <p><strong>Assigned To:</strong> <span id="ticketAssignedTo"></span></p>
-        <p><strong>Created At:</strong> <span id="ticketCreatedAt"></span></p>
-        <p><strong>Updated At:</strong> <span id="ticketUpdatedAt"></span></p>
+    <div id="ticketDetails" class="ticket-details">
+        <h2 class="details-title">Ticket Details</h2>
+        <p><strong>Title:</strong> <span id="ticketTitle" class="ticket-info"></span></p>
+        <p><strong>Description:</strong> <span id="ticketDescription" class="ticket-info"></span></p>
+        <p><strong>Status:</strong> <span id="ticketStatus" class="ticket-info"></span></p>
+        <p><strong>Priority:</strong> <span id="ticketPriority" class="ticket-info"></span></p>
+        <p><strong>Created By:</strong> <span id="ticketCreatedBy" class="ticket-info"></span></p>
+        <p><strong>Assigned To:</strong> <span id="ticketAssignedTo" class="ticket-info"></span></p>
+        <p><strong>Created At:</strong> <span id="ticketCreatedAt" class="ticket-info"></span></p>
+        <p><strong>Updated At:</strong> <span id="ticketUpdatedAt" class="ticket-info"></span></p>
     </div>
     
     <script>
@@ -99,5 +94,6 @@
                 .catch(error => console.error('Error fetching data: ', error));
         });
     </script>
+    </main>
 </body>
 </html>
