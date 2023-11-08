@@ -88,9 +88,15 @@
                 // If search input is empty, show all tickets
                 populateTable(allTicketsData);
             } else {
-                // Filter tickets based on the search term (Ticket ID)
-                const searchResults = allTicketsData.filter(ticket => ticket.TicketID.toLowerCase().includes(searchTerm));
-                populateTable(searchResults);
+                // Find the ticket by Ticket ID
+                const foundTicket = allTicketsData.find(ticket => ticket.TicketID.toLowerCase() === searchTerm);
+                if (foundTicket) {
+                    // Redirect to ticketdetails.html and pass the Ticket ID
+                    window.location.href = `TicketDetails.html?ticketID=$${ticket.TicketID}`;
+                } else {
+                    // Display a message or handle the case when the Ticket ID is not found
+                    alert("Ticket not found.");
+                }
             }
         }
         
