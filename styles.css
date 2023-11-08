@@ -130,7 +130,7 @@ main {
 }
 
 .form-input {
-    width: 50%;
+    width: 30%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -139,7 +139,8 @@ main {
 
 .submit-button {
     display: block;
-    width: 50%;
+    margin: 0 auto;
+    width: 30%;
     padding: 10px;
     background-color: #0073e6;
     color: white;
