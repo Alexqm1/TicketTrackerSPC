@@ -19,27 +19,28 @@
             </div>
         </div>
     </header>
-    <h1>Tickets</h1>
-    <div class="centered-table">
-        <table border="1" class="ticket-table">
-            <thead>
-                <tr>
-                    <th class="max-width-ticket">Ticket ID</th>
-                    <th class="max-width-title">Title</th>
-                    <th class="max-width-description">Description</th>
-                    <th class="max-width-ticket">Status</th>
-                    <th class="max-width-ticket">Priority</th>
-                    <th class="max-width-ticket">Created By</th>
-                    <th class="max-width-ticket">Assigned To</th>
-                    <th class="max-width-ticket">Created At</th>
-                    <th class="max-width-ticket">Updated At</th>
-                </tr>
-            </thead>
-            <tbody id="ticketTableBody">
-            </tbody>
-        </table>
-    </div>
-
+    <main>
+        <h2>Tickets</h2>
+        <div class="centered-table">
+            <table border="1" class="ticket-table">
+                <thead>
+                    <tr>
+                        <th class="max-width-ticket">Ticket ID</th>
+                        <th class="max-width-title">Title</th>
+                        <th class="max-width-description">Description</th>
+                        <th class="max-width-ticket">Status</th>
+                        <th class="max-width-ticket">Priority</th>
+                        <th class="max-width-ticket">Created By</th>
+                        <th class="max-width-ticket">Assigned To</th>
+                        <th class="max-width-ticket">Created At</th>
+                        <th class="max-width-ticket">Updated At</th>
+                    </tr>
+                </thead>
+                <tbody id="ticketTableBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
     <script>
         // Fetch the JSON data from the file
         fetch('TicketData.json')
