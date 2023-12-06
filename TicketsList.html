@@ -86,15 +86,16 @@
 
             if (searchTerm === '') {
                 // If search input is empty, show all tickets
-                populateTable(TicketsData);
+                populateTable(allTicketsData);
             } else {
                 // Filter tickets based on the search term (Ticket ID)
-                const searchResults = TicketsData.filter(ticket => ticket.TicketID.toLowerCase().includes(searchTerm));
+                const searchResults = allTicketsData.filter(ticket => ticket.TicketID.toLowerCase().includes(searchTerm));
+                
                 if (searchResults.length > 0) {
-                    // Display the search results
+                    // If there are search results, display them
                     populateTable(searchResults);
                 } else {
-                    // Display a message or handle the case when no tickets match the search term
+                    // If no results are found, display a message
                     alert("No matching tickets found.");
                 }
             }
