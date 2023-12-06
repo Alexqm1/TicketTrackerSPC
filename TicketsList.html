@@ -86,16 +86,16 @@
 
             if (searchTerm === '') {
                 // If search input is empty, show all tickets
-                populateTable(allTicketsData);
+                populateTable(TicketsData);
             } else {
-                // Find the ticket by Ticket ID
-                const foundTicket = allTicketsData.find(ticket => ticket.TicketID.toLowerCase() === searchTerm);
-                if (foundTicket) {
-                    // Redirect to ticketdetails.html and pass the Ticket ID
-                    window.location.href = `TicketDetails.html?ticketID=$${ticket.TicketID}`;
+                // Filter tickets based on the search term (Ticket ID)
+                const searchResults = TicketsData.filter(ticket => ticket.TicketID.toLowerCase().includes(searchTerm));
+                if (searchResults.length > 0) {
+                    // Display the search results
+                    populateTable(searchResults);
                 } else {
-                    // Display a message or handle the case when the Ticket ID is not found
-                    alert("Ticket not found.");
+                    // Display a message or handle the case when no tickets match the search term
+                    alert("No matching tickets found.");
                 }
             }
         }
