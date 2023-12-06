@@ -21,11 +21,42 @@
             const newUsername = document.getElementById("newUsername").value;
             const newPassword = document.getElementById("newPassword").value;
 
-            // You can perform further validation if needed
+            // Simulate an AJAX request to fetch UsCntl.json
+            fetch("UsCntl.json")
+                .then(response => response.json())
+                .then(data => {
+                    const newUserId = data.length + 1;
+                    const newUser = {
+                        "UsID": newUserId.toString(),
+                        "UsName": newUsername,
+                        "UsPass": newPassword,
+                        "UsCreated": new Date().toISOString().split('T')[0]  // Current date in "YYYY-MM-DD" format
+                    };
 
-            // Redirect back to the index.html page after creating the user
-            window.location.href = "index.html";
+                    // Add the new user to the existing data
+                    data.push(newUser);
+
+                    // Simulate another AJAX request to update UsCntl.json with the new data
+                    fetch("UsCntl.json", {
+                        method: "PUT", // You may need to adjust the method based on your server setup
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(() => {
+                        // Redirect back to the index.html page after creating the user
+                        window.location.href = "index.html";
+                    })
+                    .catch(error => {
+                        console.error("Error updating UsCntl.json: ", error);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching UsCntl.json: ", error);
+                });
         });
     </script>
 </body>
 </html>
+
